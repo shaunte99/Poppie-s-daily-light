@@ -8,13 +8,16 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 30px 20px;
+  overflow-x: hidden;
 }
+
 h1 {
   font-family: 'Dancing Script', cursive;
   font-size: 3em;
   color: #d63384;
   margin-bottom: 20px;
 }
+
 .card {
   background: #fff;
   border-radius: 20px;
@@ -25,26 +28,32 @@ h1 {
   padding: 20px;
   text-align: center;
   transition: transform 0.3s ease;
+  z-index: 1;
 }
+
 .card:hover {
   transform: scale(1.02);
 }
+
 .quote {
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: 1.4em;
 }
+
 .section-title {
   font-family: 'Dancing Script', cursive;
   font-size: 2em;
   margin-bottom: 10px;
   color: #9d4edd;
 }
+
 iframe {
   border-radius: 12px;
   width: 100%;
   height: 315px;
 }
+
 .message {
   background: #ffe6f0;
   padding: 15px;
@@ -52,9 +61,87 @@ iframe {
   font-size: 1.1em;
   color: #732f61;
 }
+
 .art-caption {
   margin-top: 10px;
   font-style: italic;
   font-size: 1em;
   color: #6d597a;
+}
+
+.click-me {
+  background-color: #ff69b4;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
+  margin-bottom: 15px;
+  transition: transform 0.2s ease;
+}
+
+.click-me:hover {
+  transform: scale(1.1);
+}
+
+.click-response {
+  font-size: 1.1em;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  color: #d63384;
+  text-align: center;
+  transition: opacity 0.4s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.butterfly-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.butterfly {
+  position: absolute;
+  font-size: 24px;
+  animation: floatUp linear infinite;
+  opacity: 0.6;
+}
+
+.🦋1 { left: 10%; animation-duration: 20s; animation-delay: 0s; top: 100%; }
+.🦋2 { left: 30%; animation-duration: 25s; animation-delay: 5s; top: 110%; }
+.🦋3 { left: 60%; animation-duration: 18s; animation-delay: 3s; top: 120%; }
+.🦋4 { left: 80%; animation-duration: 22s; animation-delay: 2s; top: 105%; }
+
+@keyframes floatUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-130vh); }
+}
+
+.memory-img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.memory-img:hover {
+  transform: scale(1.03);
 }

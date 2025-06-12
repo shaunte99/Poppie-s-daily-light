@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Poppie’s Daily Light</title>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css" />
 </head>
 <body>
   <h1>Poppie’s Daily Light</h1>
+
+  <div class="click-me" onclick="showClickMessage()">Click me 💖</div>
+  <p id="click-response" class="click-response hidden">You just made someone smile. That someone is me 🌼</p>
 
   <div class="card">
     <div class="section-title">🌸 Quote of the Day</div>
@@ -21,20 +24,38 @@
   </div>
 
   <div class="card">
-    <div class="section-title">🎵 Music of the Day</div>
-    <iframe id="music" src="" frameborder="0" allowfullscreen></iframe>
-    <p class="art-caption">Here’s a beautiful song by UMI called Ms Sunshine I think you’ll really like it. ❤️</p>
+    <div class="section-title">🎵 Music of the Day - Vibes 1</div>
+    <iframe id="music1" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <div class="card">
+    <div class="section-title">🎵 Music of the Day - Vibes 2</div>
+    <iframe id="music2" src="" frameborder="0" allowfullscreen></iframe>
+    <p class="art-caption">Some music Recommendation for you💞</p>
   </div>
 
   <div class="card">
     <div class="section-title">🎨 Art of the Day</div>
-    <img src="images/15e89516-b000-4f6c-b0fc-dd3f508593b8.png" alt="Art of the Day" style="width:100%; border-radius: 12px;">
-    <p class="art-caption">My favourite picture...</p>
+    <img src="images/361c08a3-b846-430a-b7e9-fb9328051093 (1).png " alt="Art of the Day" style="width:100%; border-radius: 12px;">
+    <p class="art-caption">A Queen...</p>
   </div>
 
   <div class="card">
-    <div class="section-title">💌 Message to Ms sunshine</div>
+    <div class="section-title">💖 Memory of the Day</div>
+    <img src="images/IMG-20250309-WA0002.jpg" alt="A beautiful memory" class="memory-img">
+    <p class="message">That night you won 2 crowns and 3 sashes.. 🌼</p>
+  </div>
+
+  <div class="card" id="message-section">
+    <div class="section-title">💌 Message to Ms Sunshine</div>
     <p class="message" id="love-note">Loading...</p>
+  </div>
+
+  <div class="butterfly-container">
+    <div class="butterfly 🦋1">🦋</div>
+    <div class="butterfly 🦋2">🦋</div>
+    <div class="butterfly 🦋3">🦋</div>
+    <div class="butterfly 🦋4">🦋</div>
   </div>
 
   <script src="scripts/app.js"></script>
