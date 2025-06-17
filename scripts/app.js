@@ -14,5 +14,5 @@ fetch("data/daily.json")
 function showClickMessage() {
   const response = document.getElementById("click-response");
   response.classList.remove("hidden");
-  response.textContent = "I prayed you’d smile today and if this made you smile, God just answered 🦋💖";
+  response.textContent = "Word of the Day Is Fofo .... hope you get it lol 🦋💖";
 }
