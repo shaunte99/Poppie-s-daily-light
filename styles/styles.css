@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #ffd6ec, #ffe7fa, #e0c3fc);
+  background: url('../images/1574a57a-2829-4fc9-871a-c851a717f2f2.png') center/cover no-repeat fixed;
   color: #4c2a4e;
   display: flex;
   flex-direction: column;
@@ -54,19 +54,39 @@ iframe {
   height: 315px;
 }
 
-.message {
+.message, .mood-message {
   background: #ffe6f0;
   padding: 15px;
   border-radius: 12px;
   font-size: 1.1em;
   color: #732f61;
+  margin-top: 10px;
 }
 
-.art-caption {
+textarea {
+  width: 100%;
+  height: 120px;
+  border-radius: 12px;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
   margin-top: 10px;
-  font-style: italic;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+button {
+  margin: 5px;
+  background-color: #d63384;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
   font-size: 1em;
-  color: #6d597a;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #b12a6e;
 }
 
 .click-me {
@@ -132,16 +152,4 @@ iframe {
 @keyframes floatUp {
   0% { transform: translateY(0); }
   100% { transform: translateY(-130vh); }
-}
-
-.memory-img {
-  width: 100%;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  margin-bottom: 10px;
-  transition: transform 0.3s ease;
-}
-
-.memory-img:hover {
-  transform: scale(1.03);
 }

@@ -36,19 +36,29 @@
 
   <div class="card">
     <div class="section-title">🎨 Art of the Day</div>
-    <img src="images/a798a525-bf6b-45ea-b8f4-2324e0e97e0e.png" alt="Art of the Day" style="width:100%; border-radius: 12px;">
-    <p class="art-caption">Liora...🌻🌺 </p>
-  </div>
-
-  <div class="card">
-    <div class="section-title">💖 Memory of the Day</div>
-    <img src="images/IMG-20241231-WA0012.jpg" alt="A beautiful memory" class="memory-img">
-    <p class="message">Our Amazing Judge...🌼</p>
+    <img src="images/your-art.png" alt="Art of the Day" style="width:100%; border-radius: 12px;">
+    <p class="art-caption">A Queen...</p>
   </div>
 
   <div class="card" id="message-section">
     <div class="section-title">💌 Message to Ms Sunshine</div>
     <p class="message" id="love-note">Loading...</p>
+  </div>
+
+  <div class="card">
+    <div class="section-title">🌤️ Mood Tracker</div>
+    <button onclick="showMoodMessage('good')">😊 Good</button>
+    <button onclick="showMoodMessage('busy')">😓 Busy</button>
+    <button onclick="showMoodMessage('bad')">😔 Bad</button>
+    <button onclick="showMoodMessage('grateful')">🙏 Grateful</button>
+    <p class="mood-message" id="mood-message"></p>
+  </div>
+
+  <div class="card">
+    <div class="section-title">📝 Reflection Journal</div>
+    <textarea id="journal-entry" placeholder="Write your thoughts..."></textarea>
+    <button onclick="saveJournal()">Save Reflection</button>
+    <p class="mood-message hidden" id="save-confirmation">Saved! 💾</p>
   </div>
 
   <div class="butterfly-container">
