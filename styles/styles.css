@@ -1,3 +1,4 @@
+/* Existing styles (you already have these) */
 body {
   margin: 0;
   padding: 0;
@@ -35,23 +36,11 @@ h1 {
   transform: scale(1.02);
 }
 
-.quote {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 1.4em;
-}
-
 .section-title {
   font-family: 'Dancing Script', cursive;
   font-size: 2em;
   margin-bottom: 10px;
   color: #9d4edd;
-}
-
-iframe {
-  border-radius: 12px;
-  width: 100%;
-  height: 315px;
 }
 
 .message, .mood-message {
@@ -61,6 +50,18 @@ iframe {
   font-size: 1.1em;
   color: #732f61;
   margin-top: 10px;
+}
+
+.art-caption {
+  font-style: italic;
+  color: #555;
+  margin-top: 10px;
+}
+
+iframe {
+  border-radius: 12px;
+  width: 100%;
+  height: 315px;
 }
 
 textarea {
@@ -152,4 +153,23 @@ button:hover {
 @keyframes floatUp {
   0% { transform: translateY(0); }
   100% { transform: translateY(-130vh); }
+}
+
+/* Manifesto Section */
+.manifesto-card {
+  background: #fff0fa;
+  border: 2px solid #ffbde0;
+}
+
+.manifesto-image {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.manifesto-text {
+  color: #5b264b;
+  font-style: italic;
+  line-height: 1.6;
 }

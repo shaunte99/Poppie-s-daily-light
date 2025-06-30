@@ -11,7 +11,7 @@
   <h1>Poppie’s Daily Light</h1>
 
   <div class="click-me" onclick="showClickMessage()">Click me 💖</div>
-  <p id="click-response" class="click-response hidden">🌼</p>
+  <p id="click-response" class="click-response hidden">You just made someone smile. That someone is me 🌼</p>
 
   <div class="card">
     <div class="section-title">🌸 Quote of the Day</div>
@@ -23,17 +23,21 @@
     <p id="scripture">Loading...</p>
   </div>
 
- 
   <div class="card">
-    <div class="section-title">🎵 Music of the Day </div>
+    <div class="section-title">🎵 Music of the Day - Vibes 1</div>
+    <iframe id="music1" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <div class="card">
+    <div class="section-title">🎵 Music of the Day - Vibes 2</div>
     <iframe id="music2" src="" frameborder="0" allowfullscreen></iframe>
-    <p class="art-caption">this song is beautiful... thought you might like it Ms Sunshine   ....💞</p>
+    <p class="art-caption">Some music Recommendation for you💞</p>
   </div>
 
   <div class="card">
     <div class="section-title">🎨 Art of the Day</div>
-    <img src="images/081efadf-6d83-4bcb-b580-a888c0aa15c3.png" alt="Art of the Day" style="width:100%; border-radius: 12px;">
-    <p class="art-caption">The future Queen of South Africa 🦋🌺 </p>
+    <img src="images/your-art.png" alt="Art of the Day" style="width:100%; border-radius: 12px;">
+    <p class="art-caption">A Queen...</p>
   </div>
 
   <div class="card" id="message-section">
@@ -50,11 +54,35 @@
     <p class="mood-message" id="mood-message"></p>
   </div>
 
+
+
+  <!-- 👑 Pageantry Section -->
   <div class="card">
-    <div class="section-title">📝 Reflection Journal</div>
-    <textarea id="journal-entry" placeholder="Write your thoughts..."></textarea>
-    <button onclick="saveJournal()">Save Reflection</button>
-    <p class="mood-message hidden" id="save-confirmation">Saved! 💾</p>
+    <div class="section-title">👑 The Art of Her Reign</div>
+    <p class="message">
+      You are not just in a pageant — you are part of a legacy of powerful, graceful, world-changing women.
+      This section is your sanctuary of confidence. Watch, learn, and remember: you were born for the crown. 💫
+    </p>
+    <iframe src="https://www.youtube.com/embed/iMIhWZlN3qQ" frameborder="0" allowfullscreen></iframe>
+    <p class="art-caption">Miss Universe Moments – Feel the power 💃</p>
+
+    <iframe src="https://www.youtube.com/embed/ThXKewR3zjQ" frameborder="0" allowfullscreen></iframe>
+    <p class="art-caption">Runway Walk Practice with Lu Sierra 🔥</p>
+
+    <iframe src="https://www.youtube.com/embed/1H9sXznx0pQ" frameborder="0" allowfullscreen></iframe>
+    <p class="art-caption">Dani Walker’s Pageant Prep Tips 👑</p>
+  </div>
+
+  <!-- 📍 Manifesto Section -->
+  <div class="card manifesto-card">
+    <div class="section-title">📍 Manifesto of Her Majesty</div>
+    <img src="images/paris.jpg" alt="City View" class="manifesto-image">
+    <p class="message manifesto-text">
+      Somewhere in the golden streets of <strong>Paris</strong>, beauty quietly redefines itself — 
+      not in the statues or buildings, but in the gentle grace of someone like you.🗼<br><br>
+      If cities had souls, this one would borrow yours — elegant, brave, and radiant in ways maps could never capture. 
+      <em>You are not just a light in this world. You are the skyline.</em>
+    </p>
   </div>
 
   <div class="butterfly-container">

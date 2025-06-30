@@ -3,7 +3,7 @@ fetch("data/daily.json")
   .then(data => {
     document.getElementById("quote").textContent = `"${data.quote.text}" — ${data.quote.author}`;
     document.getElementById("scripture").innerHTML = `"${data.scripture.text}"<br><strong>— ${data.scripture.reference}</strong>`;
-    // document.getElementById("music1").src = data.music.youtubeEmbed1; // Removed because music1 iframe is gone
+    document.getElementById("music1").src = data.music.youtubeEmbed1;
     document.getElementById("music2").src = data.music.youtubeEmbed2;
     document.getElementById("love-note").innerHTML = data.message;
   })
@@ -12,16 +12,16 @@ fetch("data/daily.json")
 function showClickMessage() {
   const response = document.getElementById("click-response");
   response.classList.remove("hidden");
-  response.textContent = "Another click from you and suddenly the world makes much more sense 🦋";
+  response.textContent = "You clicked it! That made my day. I hope this site makes you smile like you made me smile today 🦋";
 }
 
 function showMoodMessage(mood) {
   const moodMessage = document.getElementById("mood-message");
   const messages = {
-    good: "I’m so happy you’re smiling today. You deserve days like this. Keep shining, Queen.🌞",
+    good: "I’m so happy you’re smiling today. You deserve days like this, Keep shining, Queen.🌞",
     busy: "Even busy bees make honey. You’re still creating sweetness 🍯",
-    bad: "It’s okay to not be okay sometimes. You’re allowed to feel. Cry if you need to, rest if you must… You are still worthy. Still loved. I'm always here for you 💗",
-    grateful: "Gratitude makes your soul glow. You're golden. When you say thank you to life, heaven whispers: you’re welcome 🌟"
+    bad: "It’s okay to not be okay sometimes. You’re allowed to feel. Cry if you need to, rest if you must.. You are still worthy. Still loved and I am always here for you💗",
+    grateful: "Gratitude makes your soul glow. You're golden ..it makes the heart richer. When you say thank you to life, heaven whispers you’re welcome🌟"
   };
   moodMessage.textContent = messages[mood];
   moodMessage.classList.remove("hidden");
