@@ -12,7 +12,7 @@ fetch("data/daily.json")
 function showClickMessage() {
   const response = document.getElementById("click-response");
   response.classList.remove("hidden");
-  response.textContent = "You clicked it! That made my day. I hope this site makes you smile like you made me smile today 🦋";
+  response.textContent = "YOU CLICKED IT .. I HOPE THIS PAGE MAKES YOUR DAY EVRYTIME EVEN JUST A LITTLE 🦋";
 }
 
 function showMoodMessage(mood) {
