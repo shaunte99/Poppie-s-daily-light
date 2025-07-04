@@ -1,14 +1,12 @@
-/* Existing styles (you already have these) */
 body {
   margin: 0;
-  padding: 0;
+  padding: 30px 20px;
   font-family: 'Poppins', sans-serif;
   background: url('../images/1574a57a-2829-4fc9-871a-c851a717f2f2.png') center/cover no-repeat fixed;
   color: #4c2a4e;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 20px;
   overflow-x: hidden;
 }
 
@@ -155,7 +153,6 @@ button:hover {
   100% { transform: translateY(-130vh); }
 }
 
-/* Manifesto Section */
 .manifesto-card {
   background: #fff0fa;
   border: 2px solid #ffbde0;
@@ -172,4 +169,25 @@ button:hover {
   color: #5b264b;
   font-style: italic;
   line-height: 1.6;
+}
+
+.prize-link {
+  text-decoration: none;
+}
+
+.prize-link .final-message-btn {
+  background-color: #d63384;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(214, 51, 132, 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.prize-link .final-message-btn:hover {
+  background-color: #9d4edd;
+  transform: scale(1.05);
 }
