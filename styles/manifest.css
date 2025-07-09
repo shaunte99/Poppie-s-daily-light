@@ -1,0 +1,239 @@
+/* === Body Styling === */
+body {
+  margin: 0;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+  background: url('../images/1574a57a-2829-4fc9-871a-c851a717f2f2.png') center/cover no-repeat fixed;
+  color: #4c2a4e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.4s ease;
+}
+
+/* === Night Mode === */
+body.night-mode {
+  background: linear-gradient(to bottom, #2b1337, #1d102b);
+  color: #ffffff;
+}
+
+body.night-mode .manifest-container {
+  background: #301b3f;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.08);
+}
+
+/* === Night Toggle Button === */
+.night-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #d63384;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-size: 0.9em;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* === Floating Butterflies / Stars === */
+.floating-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.float-item {
+  position: absolute;
+  font-size: 24px;
+  animation: floatUp linear infinite;
+  opacity: 0.3;
+}
+
+.float-item:nth-child(1) { left: 10%; animation-duration: 22s; top: 100%; }
+.float-item:nth-child(2) { left: 50%; animation-duration: 28s; top: 110%; }
+.float-item:nth-child(3) { left: 80%; animation-duration: 25s; top: 120%; }
+
+@keyframes floatUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-130vh); }
+}
+
+/* === Manifest Container === */
+.manifest-container {
+  max-width: 720px;
+  width: 100%;
+  background: #fff0fa;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 24px rgba(214, 51, 132, 0.1);
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* === Titles === */
+.manifest-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.8em;
+  color: #d63384;
+  margin-bottom: 10px;
+  min-height: 50px;
+}
+
+.manifest-sub {
+  font-style: italic;
+  color: #7a3573;
+  margin-bottom: 30px;
+  font-size: 1.2em;
+}
+
+/* === Inputs & Textareas === */
+.input-box,
+.textarea-box {
+  width: 100%;
+  max-width: 100%;
+  min-height: 50px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  background-color: #fffdfd;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  color: #4c2a4e;
+  resize: vertical;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(214, 51, 132, 0.05);
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.input-box:focus,
+.textarea-box:focus {
+  border-color: #d63384;
+  box-shadow: 0 0 10px rgba(214, 51, 132, 0.25);
+  outline: none;
+}
+
+.large-box {
+  height: 200px;
+  min-height: 160px;
+  max-height: 400px;
+}
+
+/* === Save Button === */
+.save-btn {
+  background-color: #d63384;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #a82565;
+}
+
+/* === Confirmation Message === */
+.confirmation {
+  color: #d63384;
+  font-style: italic;
+  display: none;
+  margin-top: 10px;
+}
+
+/* === Energy Checklist === */
+.energy-checklist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.energy-checklist input {
+  display: none;
+}
+
+.energy-checklist label {
+  background-color: #ffe6f0;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1em;
+  cursor: pointer;
+  color: #732f61;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.energy-checklist input:checked + label {
+  background-color: #d63384;
+  color: white;
+}
+
+/* === Section Headers === */
+.mirror-reflection h3,
+.dear-me-section h3 {
+  margin-top: 30px;
+  font-size: 1.5em;
+  color: #732f61;
+}
+
+/* === Affirmation Box === */
+.affirmation {
+  margin-top: 30px;
+  background: #fff6fb;
+  border-left: 5px solid #d63384;
+  padding: 15px;
+  font-style: italic;
+  color: #5b264b;
+  border-radius: 12px;
+}
+
+/* === Footer Note === */
+.footer-note {
+  margin-top: 40px;
+  font-size: 1.1em;
+  color: #6a2c5b;
+  background-color: #fef0f6;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* === Mood Message Box === */
+.mood-message {
+  margin-top: 15px;
+  background-color: #ffe6f0;
+  padding: 14px;
+  border-radius: 12px;
+  font-style: italic;
+  color: #732f61;
+  display: none;
+}
+
+/* === Responsive Layout === */
+@media screen and (max-width: 600px) {
+  .manifest-container {
+    padding: 25px 15px;
+  }
+
+  .input-box,
+  .textarea-box {
+    font-size: 0.95em;
+  }
+
+  .large-box {
+    height: 180px;
+  }
+}
