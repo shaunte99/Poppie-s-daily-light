@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Poppie’s Heart Manifest 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/manifest.css">
+</head>
+<body>
+  <!-- Toggle Night Mode -->
+  <button id="toggleNight" class="night-toggle">🌙 Soft Mode</button>
+
+  <!-- Floating Stars/Butterflies -->
+  <div class="floating-container">
+    <div class="float-item">🦋</div>
+    <div class="float-item">✨</div>
+    <div class="float-item">🌸</div>
+  </div>
+
+  <div class="manifest-container">
+    <h1 class="manifest-title" id="typewriter-text"></h1>
+    <p class="manifest-sub">Your soft space to feel, heal, and bloom.</p>
+
+    <input type="text" id="dailyManifest" class="input-box" placeholder="Today, I want to...">
+    <button class="save-btn" onclick="saveManifest()">Manifest It ✨</button>
+    <p id="manifestConfirmation" class="confirmation">Manifest saved, angel 🫶</p>
+
+    <div class="energy-checklist">
+      <input type="checkbox" id="peace" /><label for="peace">Peace</label>
+      <input type="checkbox" id="joy" /><label for="joy">Joy</label>
+      <input type="checkbox" id="confidence" /><label for="confidence">Confidence</label>
+      <input type="checkbox" id="rest" /><label for="rest">Rest</label>
+      <input type="checkbox" id="softness" /><label for="softness">Softness</label>
+    </div>
+
+    <textarea id="dreamNote" class="textarea-box" placeholder="Write about one dream you’re growing…"></textarea>
+    <button class="save-btn" onclick="saveDream()">Save Dream 🌷</button>
+    <p id="dreamConfirmation" class="confirmation">Dream saved in your secret garden 🪻</p>
+
+    <div class="mirror-reflection">
+      <h3>🪞 One Thing I Love About Myself Today</h3>
+      <input type="text" id="selfLoveInput" class="input-box" placeholder="You are glowing, girl ✨">
+      <button class="save-btn" onclick="saveSelfLove()">Save Self-Love 💘</button>
+      <p id="selfLoveConfirm" class="confirmation">You spoke beauty over yourself 🌟</p>
+    </div>
+
+    <div class="dear-me-section">
+      <h3>💌 Write a Letter to Yourself</h3>
+      <textarea id="dearMeNote" class="textarea-box large-box" placeholder="Dear me, I just want to say..."></textarea>
+      <button class="save-btn" onclick="saveDearMe()">Save Letter 💗</button>
+      <p id="dearMeConfirm" class="confirmation">Letter saved to your heartspace 📖</p>
+    </div>
+
+    <div class="affirmation" id="affirmationDisplay">
+      🌟 "You are more than enough. And your light is needed exactly as it is."
+    </div>
+
+    <div class="footer-note">
+      No matter what today brings, you’re still loved.  
+      You’re still valuable.  
+      And you, Poppie, are absolutely unforgettable. 💞
+    </div>
+  </div>
+
+  <script src="scripts/manifest.js"></script>
+</body>
+</html>
