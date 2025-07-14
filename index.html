@@ -36,8 +36,8 @@
 
   <div class="card">
     <div class="section-title">🎨 Art of the Day</div>
-    <img src="images/3449a51f-de6f-4e17-86b8-79d22bd80a75.png" alt="Art of the Day" style="width:100%; border-radius: 12px;">
-    <p class="art-caption">♥️👸🏽🌺♥️</p>
+    <img src="images/your-art.png" alt="Art of the Day" style="width:100%; border-radius: 12px;">
+    <p class="art-caption">A Queen...</p>
   </div>
 
   <div class="card" id="message-section">
@@ -54,21 +54,125 @@
     <p class="mood-message" id="mood-message"></p>
   </div>
 
-  <div class="card">
-    <div class="section-title">👑 The Art of Her Reign</div>
-    <p class="message">
-      You are not just in a pageant — you are part of a legacy of powerful, graceful, world-changing women.
-      This section is your sanctuary of confidence. Watch, learn, and remember: you were born for the crown. 💫
-    </p>
-    <iframe src="https://www.youtube.com/embed/sTCL0TH5Mj0" frameborder="0" allowfullscreen></iframe>
-    <p class="art-caption">Content creation videos 💃</p>
+ <div class="card" id="puzzle-card">
+  <div class="section-title">🧩 The Puzzle of You</div>
+  <p style="margin-bottom: 20px;">Answer these 10 gentle questions to unlock a letter written from someone who sees your future already 💖</p>
 
-    <iframe src="https://www.youtube.com/embed/idYqCloG2oA" frameborder="0" allowfullscreen></iframe>
-    <p class="art-caption">Pageant tips♥️🔥</p>
-
-    <iframe src="https://www.youtube.com/embed/Su3FVsxlNWc" frameborder="0" allowfullscreen></iframe>
-    <p class="art-caption">A glimpse into your future 👑</p>
+  <div class="puzzle-question"><p>1. What’s your ultimate comfort moment?</p>
+    <select onchange="checkPuzzleCompletion()" class="puzzle-select" id="q1">
+      <option value="">Choose...</option>
+      <option>Snuggled in bed with snacks & a series</option>
+      <option>Scrolling Pinterest with soft music</option>
+      <option>Hair or nails freshly done</option>
+      <option>That moment after a perfect selfie</option>
+    </select>
   </div>
+
+  <div class="puzzle-question"><p>2. What kind of cloud are you today?</p>
+    <select onchange="checkPuzzleCompletion()" class="puzzle-select" id="q2">
+      <option value="">Choose...</option>
+      <option>A gentle glowing one</option>
+      <option>A stormy but strong cloud</option>
+      <option>Cotton candy magic</option>
+      <option>A mysterious evening sky</option>
+    </select>
+  </div>
+
+  <div class="puzzle-question"><p>3. What color feels like your soul right now?</p>
+    <select onchange="checkPuzzleCompletion()" class="puzzle-select" id="q3">
+      <option value="">Choose...</option>
+      <option>Rose pink</option>
+      <option>Lavender</option>
+      <option>Golden peach</option>
+      <option>Pastel blue</option>
+    </select>
+  </div>
+
+  <div class="puzzle-question"><p>4. How would someone describe your smile?</p>
+    <select onchange="checkPuzzleCompletion()" class="puzzle-select" id="q4">
+      <option value="">Choose...</option>
+      <option>Infectious & sweet</option>
+      <option>Bright like sunshine</option>
+      <option>Soft & shy</option>
+      <option>Unforgettable</option>
+    </select>
+  </div>
+
+  <div class="puzzle-question"><p>5. What makes you feel most "you"?</p>
+    <select onchange="checkPuzzleCompletion()" class="puzzle-select" id="q5">
+      <option value="">Choose...</option>
+      <option>Creating content</option>
+      <option>Dancing freely</option>
+      <option>Dressing up like royalty</option>
+      <option>Helping people feel something</option>
+    </select>
+  </div>
+
+  <div class="puzzle-question"><p>6. What’s a secret superpower you have?</p>
+    <select onchange="checkPuzzleCompletion()" class="puzzle-select" id="q6">
+      <option value="">Choose...</option>
+      <option>Lighting up a room silently</option>
+      <option>Reading people deeply</option>
+      <option>Making people feel seen</option>
+      <option>Turning pain into beauty</option>
+    </select>
+  </div>
+
+  <div class="puzzle-question"><p>7. What makes you feel deeply alive?</p>
+    <select onchange="checkPuzzleCompletion()" class="puzzle-select" id="q7">
+      <option value="">Choose...</option>
+      <option>Sunset walks</option>
+      <option>Live music moments</option>
+      <option>Being told you're loved</option>
+      <option>Making someone smile</option>
+    </select>
+  </div>
+
+  <div class="puzzle-question"><p>8. What’s a small thing that gives you hope?</p>
+    <select onchange="checkPuzzleCompletion()" class="puzzle-select" id="q8">
+      <option value="">Choose...</option>
+      <option>Butterflies</option>
+      <option>A Bible verse that hits your heart</option>
+      <option>Your reflection on a good day</option>
+      <option>Your little dreams in secret</option>
+    </select>
+  </div>
+
+  <div class="puzzle-question"><p>9. If your heart could speak right now, what would it whisper?</p>
+    <select onchange="checkPuzzleCompletion()" class="puzzle-select" id="q9">
+      <option value="">Choose...</option>
+      <option>“I’m growing even when I’m quiet”</option>
+      <option>“I hope someone sees me fully”</option>
+      <option>“I miss something I can’t name”</option>
+      <option>“I know I’m made for more”</option>
+    </select>
+  </div>
+
+  <div class="puzzle-question"><p>10. What version of you is silently blooming?</p>
+    <select onchange="checkPuzzleCompletion()" class="puzzle-select" id="q10">
+      <option value="">Choose...</option>
+      <option>The woman who owns her beauty</option>
+      <option>The queen who leads with softness</option>
+      <option>The girl who finds peace again</option>
+      <option>The creator who changes lives</option>
+    </select>
+  </div>
+
+  <div id="letter-surprise" class="hidden letter-card">
+    <p class="section-title">📜 A Letter to Future You</p>
+    <div class="letter-content">
+      <p class="letter-text">
+        Dear future you,<br><br>
+        I already see her the girl who Did everything, who smiled through battles no one saw. The one who never stopped shining.<br><br>
+        I hope you’ve fallen in love with your mind, with your gentleness, and your resilience. I hope you know you are loved no matter what you do no matter what you achieve.<br><br>
+        Don’t forget how rare your heart is. Don’t let the world make you hard. Keep your softness it’s your superpower. And no matter how far you go, you’ll always have someone who believed in you before you even got there.<br><br>
+        I already see the future I hope you do too<br>
+        —💗
+      </p>
+    </div>
+  </div>
+</div>
+
 
 
   <div class="butterfly-container">
