@@ -12,7 +12,7 @@ fetch("data/daily.json")
 function showClickMessage() {
   const response = document.getElementById("click-response");
   response.classList.remove("hidden");
-  response.textContent = "YOU CLICKED IT .. I HOPE THIS PAGE MAKES YOUR DAY EVRYTIME EVEN JUST A LITTLE 🦋";
+  response.textContent = "I hope this site always makes your heart🦋";
 }
 
 function showMoodMessage(mood) {
@@ -39,3 +39,17 @@ window.addEventListener("DOMContentLoaded", () => {
     document.getElementById("journal-entry").value = saved;
   }
 });
+
+function checkPuzzleCompletion() {
+  const answers = [];
+  for (let i = 1; i <= 10; i++) {
+    answers.push(document.getElementById("q" + i).value);
+  }
+
+  const allAnswered = answers.every(val => val !== "");
+  if (allAnswered) {
+    document.getElementById("letter-surprise").classList.remove("hidden");
+  }
+}
+
+
