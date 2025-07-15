@@ -41,15 +41,20 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 function checkPuzzleCompletion() {
-  const answers = [];
-  for (let i = 1; i <= 10; i++) {
-    answers.push(document.getElementById("q" + i).value);
+  const totalQuestions = 10;
+  let allAnswered = true;
+
+  for (let i = 1; i <= totalQuestions; i++) {
+    const value = document.getElementById(`q${i}`).value;
+    if (value === "") {
+      allAnswered = false;
+      break;
+    }
   }
 
-  const allAnswered = answers.every(val => val !== "");
-  if (allAnswered) {
-    document.getElementById("letter-surprise").classList.remove("hidden");
+  const surpriseElement = document.getElementById("letter-surprise");
+  if (allAnswered && surpriseElement.classList.contains("hidden")) {
+    surpriseElement.classList.remove("hidden");
+    surpriseElement.classList.add("fade-in");
   }
 }
-
-
