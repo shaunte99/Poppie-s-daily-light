@@ -41,20 +41,31 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 function checkPuzzleCompletion() {
-  const totalQuestions = 10;
-  let allAnswered = true;
-
-  for (let i = 1; i <= totalQuestions; i++) {
-    const value = document.getElementById(`q${i}`).value;
-    if (value === "") {
-      allAnswered = false;
-      break;
-    }
+  const answers = [];
+  for (let i = 1; i <= 10; i++) {
+    answers.push(document.getElementById("q" + i).value);
   }
 
-  const surpriseElement = document.getElementById("letter-surprise");
-  if (allAnswered && surpriseElement.classList.contains("hidden")) {
-    surpriseElement.classList.remove("hidden");
-    surpriseElement.classList.add("fade-in");
+  const allAnswered = answers.every(val => val !== "");
+  if (allAnswered) {
+    document.getElementById("letter-surprise").classList.remove("hidden");
   }
 }
+
+function revealCrownMessage(crownNumber) {
+  const messages = {
+    1: "You walk into a room and it forgets what it was doing. That’s the kind of presence you have....loud, bright, unforgettable.",
+    2: "Some girls hope to be seen. You were born watched. But the rare thing? You actually deserve the eyes.",
+    3: "There’s a light in you that doesn’t ask permission. It just shows up, like golden hour ...soft, perfect, exactly what the day needed.",
+    4: "You don’t need to say much to be remembered. Your smile speaks in echoes. Your vibe stays long after the conversation ends.",
+    5: "Even when you’re unsure, you carry yourself like you’ve already won. That’s a kind of royalty they don’t teach it’s just in you.",
+    6: "You’re the kind of beauty people build stories around."
+  };
+
+  const message = messages[crownNumber];
+  const crownMsg = document.getElementById("crown-message");
+  crownMsg.textContent = message;
+  crownMsg.classList.remove("hidden");
+}
+
+
