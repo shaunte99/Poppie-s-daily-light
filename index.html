@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -24,184 +24,75 @@
   </div>
 
   <div class="card">
-    <div class="section-title">🎵 Music of the Day - Vibes 1</div>
+  <div class="section-title">🎨 Art of the Day</div>
+  <img src="images/your-art.png" alt="Art of the Day" style="width:100%; border-radius: 12px;">
+  <p class="art-caption">You don’t just admire beauty... you *are* the reason it exists 💫</p>
+</div>
+
+
+  <div class="card">
+    <div class="section-title">🎵 Music Vibes</div>
     <iframe id="music1" src="" frameborder="0" allowfullscreen></iframe>
   </div>
 
   <div class="card">
-    <div class="section-title">🎵 Music of the Day - Vibes 2</div>
-    <iframe id="music2" src="" frameborder="0" allowfullscreen></iframe>
-    <p class="art-caption">Some music Recommendation for you💞</p>
-  </div>
-
-  <div class="card">
-    <div class="section-title">🎨 Art of the Day</div>
-    <img src="images/PoppieInParis.png" alt="Art of the Day" style="width:100%; border-radius: 12px;">
-    <p class="art-caption">💛</p>
-  </div>
-
-  <div class="card" id="message-section">
     <div class="section-title">💌 Message to Ms Sunshine</div>
     <p class="message" id="love-note">Loading...</p>
   </div>
 
+  <!-- 👑 Pick a Crown -->
+  <div class="card" id="crown-card">
+  <div class="section-title">👑 Pick a Crown</div>
+  <p style="margin-bottom: 20px;">Choose a crown to reveal something beautiful about you…</p>
+  <div class="crown-row">
+    <div class="crown" onclick="revealCrownMessage(1)">👑</div>
+    <div class="crown" onclick="revealCrownMessage(2)">👑</div>
+    <div class="crown" onclick="revealCrownMessage(3)">👑</div>
+    <div class="crown" onclick="revealCrownMessage(4)">👑</div>
+    <div class="crown" onclick="revealCrownMessage(5)">👑</div>
+    <div class="crown" onclick="revealCrownMessage(6)">👑</div>
+  </div>
+  <p id="crown-message" class="crown-message hidden"></p>
+</div>
+
+
+  <!-- 🌷 Visual Escape Card -->
   <div class="card">
-    <div class="section-title">🌤️ Mood Tracker</div>
-    <button onclick="showMoodMessage('good')">😊 Good</button>
-    <button onclick="showMoodMessage('busy')">😓 Busy</button>
-    <button onclick="showMoodMessage('bad')">😔 Bad</button>
-    <button onclick="showMoodMessage('grateful')">🙏 Grateful</button>
-    <p class="mood-message" id="mood-message"></p>
+    <div class="section-title">🌷 Click to Enter Paris</div>
+    <p>This is a place I picked just for you. Click and breathe it in.</p>
+    <a href="paris.html">
+      <button class="final-message-btn">✨ Enter Garden</button>
+    </a>
   </div>
 
-  <div class="card" id="puzzle-card">
-  <div class="section-title">Daily Pause & Ponder</div>
-  <p style="margin-bottom: 20px;">Answer these 10 questions to unlock a message </p>
-
-<div class="puzzle-question"><p>1. When all the crowns are gone, who do you still want to be?</p>
-  <select onchange="checkPuzzleCompletion()" class="puzzle-select" id="q1">
-    <option value="">Choose...</option>
-    <option>A woman of strength and softness</option>
-    <option>Someone whose light outlasts her titles</option>
-    <option>A voice for the ones who feel unseen</option>
-    <option>A reflection of God’s grace in motion</option>
-  </select>
-</div>
-
-<div class="puzzle-question"><p>2. What do you secretly hope people remember you for?</p>
-  <select onchange="checkPuzzleCompletion()" class="puzzle-select" id="q2">
-    <option value="">Choose...</option>
-    <option>How deeply I cared for others</option>
-    <option>The way I carried pain with purpose</option>
-    <option>My courage to be real and vulnerable</option>
-    <option>That I inspired others to dream bigger</option>
-  </select>
-</div>
-
-<div class="puzzle-question"><p>3. In your pageant journey, what are you really searching for?</p>
-  <select onchange="checkPuzzleCompletion()" class="puzzle-select" id="q3">
-    <option value="">Choose...</option>
-    <option>A deeper understanding of myself</option>
-    <option>A platform that lets me change lives</option>
-    <option>The feeling that I’m finally enough</option>
-    <option>Confirmation that I’m walking in purpose</option>
-  </select>
-</div>
-
-<div class="puzzle-question"><p>4. What fear do you face the most when chasing your dreams?</p>
-  <select onchange="checkPuzzleCompletion()" class="puzzle-select" id="q4">
-    <option value="">Choose...</option>
-    <option>The fear of not being chosen</option>
-    <option>The fear of being misunderstood</option>
-    <option>The fear that I’m not doing enough</option>
-    <option>The fear of losing myself in it all</option>
-  </select>
-</div>
-
-<div class="puzzle-question"><p>5. What does “winning” really look like to your soul?</p>
-  <select onchange="checkPuzzleCompletion()" class="puzzle-select" id="q5">
-    <option value="">Choose...</option>
-    <option>Peace — not just applause</option>
-    <option>Becoming the woman I prayed to be</option>
-    <option>Impacting people beyond the stage</option>
-    <option>Knowing I stayed true to who I am</option>
-  </select>
-</div>
-
-<div class="puzzle-question"><p>6. How do you want to make other girls feel through your journey?</p>
-  <select onchange="checkPuzzleCompletion()" class="puzzle-select" id="q6">
-    <option value="">Choose...</option>
-    <option>Like they’re already enough</option>
-    <option>Brave enough to try, even if afraid</option>
-    <option>Seen, heard, and worth rooting for</option>
-    <option>Empowered to chase their own crown</option>
-  </select>
-</div>
-
-<div class="puzzle-question"><p>7. If God whispered one word over your future right now, what do you hope it is?</p>
-  <select onchange="checkPuzzleCompletion()" class="puzzle-select" id="q7">
-    <option value="">Choose...</option>
-    <option>“Chosen”</option>
-    <option>“Radiant”</option>
-    <option>“Purpose”</option>
-    <option>“Unstoppable”</option>
-  </select>
-</div>
-
-<div class="puzzle-question"><p>8. What part of your character are you most proud of right now?</p>
-  <select onchange="checkPuzzleCompletion()" class="puzzle-select" id="q8">
-    <option value="">Choose...</option>
-    <option>My resilience after being overlooked</option>
-    <option>My humility in moments of success</option>
-    <option>My compassion, even when I’m hurting</option>
-    <option>My quiet courage when no one sees</option>
-  </select>
-</div>
-
-<div class="puzzle-question"><p>9. If your life were a platform, what message would you build it on?</p>
-  <select onchange="checkPuzzleCompletion()" class="puzzle-select" id="q9">
-    <option value="">Choose...</option>
-    <option>You don’t have to be perfect to be powerful</option>
-    <option>Faith is stronger than fear</option>
-    <option>Your story is your crown</option>
-    <option>There’s purpose in your pain</option>
-  </select>
-</div>
-
-<div class="puzzle-question"><p>10. When you finally look back at this season, what do you want to say to your younger self?</p>
-  <select onchange="checkPuzzleCompletion()" class="puzzle-select" id="q10">
-    <option value="">Choose...</option>
-    <option>“You were becoming the woman you prayed to be.”</option>
-    <option>“You didn’t need their validation — you were always enough.”</option>
-    <option>“God was using every moment to shape your calling.”</option>
-    <option>“I’m so proud you didn’t give up.”</option>
-  </select>
-</div>
-  
-
-  <!-- 🎥 Surprise sermon video and caption -->
-  <div id="letter-surprise" class="hidden letter-card" style="margin-top: 30px;">
-    <p class="section-title">🎥 Purpose</p>
-    <p><em>“A little prep video”</em></p>
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/W1BIbqxjwNg "
-      title="YouTube video player" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
-  </div>
-</div>
-
-
- 
-
-
-  <div class="butterfly-container">
-    <div class="butterfly 🦋1">🦋</div>
-    <div class="butterfly 🦋2">🦋</div>
-    <div class="butterfly 🦋3">🦋</div>
-    <div class="butterfly 🦋4">🦋</div>
+  <!-- 🪷 Her Manifest Space -->
+  <div class="card">
+    <div class="section-title">🪷 Her Manifest Space</div>
+    <p>A gentle place for you to dream, reflect, and plant the seeds of your next breakthrough.</p>
+    <a href="manifest.html">
+      <button class="final-message-btn">🌷 Enter the Manifest Space</button>
+    </a>
   </div>
 
-  <!-- 🌸 Manifest Link Card -->
-<div class="card">
-  <div class="section-title">🪷 Her Manifest Space</div>
-  <p style="margin-bottom: 15px;">
-    A gentle place for you to dream, reflect, and plant the seeds of your next breakthrough.
-  </p>
-  <a href="manifest.html">
-    <button class="final-message-btn">🌷 Enter the Manifest Space</button>
-  </a>
-</div>
-
-  <!-- 🎁 Journey Link -->
+  <!-- 🎁 Surprise Journey -->
   <div style="margin-top: 40px; text-align: center;">
     <a href="journey.html" class="prize-link">
       <button class="final-message-btn">🎁 Click Me for a Surprise</button>
     </a>
   </div>
 
-
+  <!-- 🦋 Butterflies and 🐦 Birds -->
+  <div class="butterfly-container">
+    <div class="butterfly b1">🦋</div>
+    <div class="butterfly b2">🦋</div>
+    <div class="butterfly b3">🦋</div>
+    <div class="butterfly b4">🦋</div>
+    <div class="bird bird1">🦋</div>
+    <div class="bird bird2">🦋</div>
+    <div class="bird bird3">🦋</div>
+    <div class="bird bird4">🦋</div>
+  </div>
 
   <script src="scripts/app.js"></script>
 </body>
 </html>
-
