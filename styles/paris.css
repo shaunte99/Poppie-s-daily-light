@@ -1,0 +1,65 @@
+ body {
+  margin: 0;
+  padding: 30px 15px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to top right, #ffe4ec, #fff9fc);
+  color: #5c2c4a;
+  text-align: center;
+}
+
+.paris-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em;
+  color: #d63384;
+  margin-bottom: 30px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.paris-message-card {
+  margin-top: 40px;
+  background: #fff0f9;
+  border: 2px dashed #ffcce5;
+  padding: 25px;
+  border-radius: 18px;
+  font-size: 1.2em;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.back-home {
+  margin-top: 30px;
+}
+
+.back-home a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #d63384;
+  background: #fff0f9;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(214, 51, 132, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.back-home a:hover {
+  background-color: #ffe0f0;
+}
