@@ -67,5 +67,14 @@ function revealCrownMessage(crownNumber) {
   crownMsg.textContent = message;
   crownMsg.classList.remove("hidden");
 }
+// Daily Crown Moment tap-to-reveal
+function revealQueen(container) {
+  const image = container.querySelector(".crown-image");
+  const caption = container.querySelector(".queen-caption");
+  container.classList.add("revealed");
+  image.classList.remove("blurred");
+  caption.classList.remove("hidden");
+}
+
 
 
